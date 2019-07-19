@@ -1,0 +1,14 @@
+*{
+    font-family: $montserrat;
+    font-size: 18px;
+    color: $white;
+    box-sizing: border-box;
+    @include phone{
+        font-size: 16px;
+    }
+}
+
+h1{
+    font-size: 18px;
+    display: inline;
+}

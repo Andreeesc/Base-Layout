@@ -1,0 +1,90 @@
+.header{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 100px;
+    picture{
+        display: block;
+        text-align: center;
+    }
+    p{
+        text-align: justify;
+        span{
+            text-transform: uppercase;
+        }
+    }
+}
+
+.group{
+    margin-top: -75px;
+    picture{
+        display: block;
+        text-align: center;
+    }
+}
+
+.contact{
+    padding: 50px 0;
+    @include box-shadow(0, 9px, 10px, rgba(0, 0, 0, 0.5));
+    @include linear-gradient($gray1, $gray2);
+    p{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        text-align: right;
+        padding: 0;
+        @include phone{
+            text-align: left;
+        }
+        li{
+            margin-bottom: 1em;
+        }
+    }
+    form{
+        position: relative;
+        margin: 0;
+        z-index: 1;
+        input,
+        select,
+        textarea,
+        option{
+            display: block;
+            width: 100%;
+            padding: 3px 0px 3px 15px;
+            color: $black;
+            margin-bottom: 10px;
+            border-color: $main;
+            outline: none;
+            @include input-placeholder {color: $black;}
+        }
+        textarea{
+            height: 80px;
+            resize: none;
+        }
+        button[type="submit"]{
+            transition: .3s all ease;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            padding: 3px 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $gray1;
+            background-color: $main;
+            position: relative;
+            top: 2px;
+            @include box-shadow(0, 6px, 0px, $main2);
+            &:hover{
+                top: 4px;
+                @include box-shadow(0, 4px, 0px, $main2);
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                z-index: -1;
+                transition: .3s all ease;
+            }
+        }
+    }
+}
